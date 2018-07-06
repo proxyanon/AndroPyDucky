@@ -1,3 +1,4 @@
+# coding: utf-8
 ''' andropyducky '''
 
 '''
@@ -9,8 +10,6 @@
 	<danielfrerie56@hotmail.com>
 
 '''
-
-#-*-coding: utf8-*-
 from sys import exit, argv
 from os import path, popen
 from platform import *
