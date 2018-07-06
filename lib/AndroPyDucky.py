@@ -10,6 +10,7 @@
 	<danielfrerie56@hotmail.com>
 
 '''
+
 from sys import exit, argv
 from os import path, popen
 from platform import *
@@ -69,7 +70,7 @@ class AndroPyDucky():
         	print("System version  ........: {ver}".format(ver=self.ver))
         	print("Arch    ................: {arch}\n".format(arch=self.arch))
 
-		array_andro = [{"GUI r": "R", "GUI x": "X", "GUI t": "T", "ENTER": "E", "DOWNARROW": "D", "UPARROW": "U", "DELAY": "L"}] # array contendo as strings que serao convertidas
+		array_andro = [{"GUI r": "R", "GUI x": "X", "GUI t": "T", "ENTER": "E", "DOWNARROW": "D", "UPARROW": "U", "DELAY": "L", "ALT TAB": "F"}] # array contendo as strings que serao convertidas
 		try: # tenta abrir o arquivo ducky
 			handle = open(self.duckyfile, 'r')
 		except: # se nao conseguir sai do programa
@@ -105,7 +106,7 @@ class AndroPyDucky():
 	''' Funcao que faz a conversao do andropyducky para o do hid-keyboard '''
 	def andro2hid(self):
 		conversion = self.duck2andro() # executa a funcao da primeira conversao
-		array_andro = [{"R": "left-meta r", "X": "left-meta x", "T": "left-ctrl left-alt t", "@": "left-shift 2", "&": "left-shift 7", "%": "left-shift 5", "(": "left-shift 9", ")": "left-shift 0", "*": "left-shift 8", "!": "left-shift 1", "#": "left-shift 3", '"': "left-shift tilde", "S": "", "E": "enter", "P": "space", "\r\n": "", "\n": "", "D": "down", "U": "up", "'": "tilde", ".": "stop", ",": "comma", ":": "left-shift slash", ";": "slash", ">": "left-shift period", "<": "left-shift comma", "-": "minus", "+": "kp-plus", "/": "right-alt q"}]
+		array_andro = [{"R": "left-meta r", "X": "left-meta x", "F": "left-alt tab", "T": "left-ctrl left-alt t", "@": "left-shift 2", "&": "left-shift 7", "%": "left-shift 5", "(": "left-shift 9", ")": "left-shift 0", "*": "left-shift 8", "!": "left-shift 1", "#": "left-shift 3", '"': "left-shift tilde", "S": "", "E": "enter", "P": "space", "\r\n": "", "\n": "", "D": "down", "U": "up", "'": "tilde", ".": "stop", ",": "comma", ":": "left-shift slash", ";": "slash", ">": "left-shift period", "<": "left-shift comma", "-": "minus", "+": "kp-plus", "/": "right-alt q"}]
 		content = ""
 
 		if self.banners:

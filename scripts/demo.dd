@@ -1,0 +1,6 @@
+GUI r
+STRING cmd
+ENTER
+DELAY
+STRING msg * ola mundo
+ENTER
